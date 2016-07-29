@@ -10,6 +10,7 @@
 		405A78C21D4BB3F9007CE709 /* Combinatorics.h in Headers */ = {isa = PBXBuildFile; fileRef = 405A78C11D4BB3F9007CE709 /* Combinatorics.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		405A78C91D4BB3FA007CE709 /* Combinatorics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 405A78BE1D4BB3F9007CE709 /* Combinatorics.framework */; };
 		405A78CE1D4BB3FA007CE709 /* CombinatoricsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405A78CD1D4BB3FA007CE709 /* CombinatoricsTests.swift */; };
+		405A78D91D4BB709007CE709 /* Combinatorics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405A78D81D4BB709007CE709 /* Combinatorics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		405A78C81D4BB3FA007CE709 /* CombinatoricsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombinatoricsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		405A78CD1D4BB3FA007CE709 /* CombinatoricsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombinatoricsTests.swift; sourceTree = "<group>"; };
 		405A78CF1D4BB3FA007CE709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		405A78D81D4BB709007CE709 /* Combinatorics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combinatorics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		405A78C01D4BB3F9007CE709 /* Combinatorics */ = {
 			isa = PBXGroup;
 			children = (
+				405A78D81D4BB709007CE709 /* Combinatorics.swift */,
 				405A78C11D4BB3F9007CE709 /* Combinatorics.h */,
 				405A78C31D4BB3F9007CE709 /* Info.plist */,
 			);
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				405A78D91D4BB709007CE709 /* Combinatorics.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,28 +314,33 @@
 		405A78D31D4BB3FA007CE709 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Combinatorics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.albertmata.Combinatorics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		405A78D41D4BB3FA007CE709 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Combinatorics/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.albertmata.Combinatorics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
