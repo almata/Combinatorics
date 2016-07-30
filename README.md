@@ -30,11 +30,131 @@ Just drag the file `Combinatorics.swift` into your project. That is all you real
 
 ## Usage
 
-TO BE ADDED LATER
+
+permutationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+	
+permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]	
+
+combinationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+
+combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
 
 ## Some examples
 
-TO BE ADDED LATER
+### Example 1
+
+	// All possible ways to arrange letters [abc].
+	let ps = Combinatorics.permutationsWithoutRepetitionFrom(["a", "b", "c"], taking: 3)
+	for p in ps { 
+		print(p.joinWithSeparator("")) 
+	}
+
+Output:
+
+> abc
+> acb
+> bac
+> bca
+> cab
+> cba
+
+### Example 2
+
+    // All possible numbers created by picking 5 different digits (accepting 0 as the first digit).
+    let ps = Combinatorics.permutationsWithoutRepetitionFrom(Array(0...9), taking: 5)
+    for p in ps {
+        var exp = 100000
+        print(p.reduce(0) { exp /= 10; return $0 + $1 * exp })
+    }
+
+Output:
+
+> 1234
+> 1235
+> 1236
+> 1237
+> [many more numbers]
+> 98762
+> 98763
+> 98764
+> 98765
+
+### Example 3
+
+    // All possible binary numbers using exactly 3 bits.
+    let prs = Combinatorics.permutationsWithRepetitionFrom(["0", "1"], taking: 3)
+    for pr in prs {
+        print(pr.joinWithSeparator(""))
+    }
+
+Output:
+
+> 000
+> 001
+> 010
+> 011
+> 100
+> 101
+> 110
+> 111
+
+### Example 4
+
+    // All possible pizzas you can order with 3 extra ingredients.
+    let cs = Combinatorics.combinationsWithoutRepetitionFrom(["bacon", "cheese", "tomato", "olives", "onion"], taking: 3)
+    for c in cs {
+        print(c)
+    }
+
+Output:
+
+> ["bacon", "cheese", "tomato"]
+> ["bacon", "cheese", "olives"]
+> ["bacon", "cheese", "onion"]
+> ["bacon", "tomato", "olives"]
+> ["bacon", "tomato", "onion"]
+> ["bacon", "olives", "onion"]
+> ["cheese", "tomato", "olives"]
+> ["cheese", "tomato", "onion"]
+> ["cheese", "olives", "onion"]
+> ["tomato", "olives", "onion"]
+
+### Example 5
+
+    // All possible ways you can pick 6 numbers out of 6 available.
+    let cs = Combinatorics.combinationsWithoutRepetitionFrom([4, 8, 15, 16, 23, 42], taking: 6)
+    for c in cs { 
+		print(c) 
+	}
+
+Output: *don't get lost here, there obviously is only one way - picking all of them, as order does not matter!*
+
+> [4, 8, 15, 16, 23, 42]
+
+### Example 6
+
+    // All possible ways 4 people can order some drinks in a bar serving only soda and beer.
+    let crs = Combinatorics.combinationsWithRepetitionFrom(["soda", "beer"], taking: 4)
+    for cr in crs {
+        let grouped = NSCountedSet(array: cr)
+        grouped.forEach({ print("\(grouped.countForObject($0)) × \($0)") })
+        print("")
+    }
+
+Output:
+
+> 4 × soda
+> 
+> 3 × soda
+> 1 × beer
+> 
+> 2 × soda
+> 2 × beer
+> 
+> 1 × soda
+> 3 × beer
+> 
+> 4 × beer
 
 ## Author
 

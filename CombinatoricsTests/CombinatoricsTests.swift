@@ -63,6 +63,7 @@ class CombinatoricsTests: XCTestCase {
         // Expected result = n^r
         XCTAssertEqual(Combinatorics.permutationsWithRepetitionFrom([1], taking: 1).count, 1)
         XCTAssertEqual(Combinatorics.permutationsWithRepetitionFrom([1, 2], taking: 2).count, 4)
+        XCTAssertEqual(Combinatorics.permutationsWithRepetitionFrom([1, 2], taking: 3).count, 8)
         XCTAssertEqual(Combinatorics.permutationsWithRepetitionFrom([1, 2, 3], taking: 3).count, 27)
         XCTAssertEqual(Combinatorics.permutationsWithRepetitionFrom([1, 2, 3, 4], taking: 4).count, 256)
         XCTAssertEqual(Combinatorics.permutationsWithRepetitionFrom([1, 2, 3, 4, 5], taking: 5).count, 3125)
@@ -161,6 +162,7 @@ class CombinatoricsTests: XCTestCase {
         // Expected result = (n+r-1)! / (r! × (n-1)!)
         XCTAssertEqual(Combinatorics.combinationsWithRepetitionFrom([1], taking: 1).count, 1)
         XCTAssertEqual(Combinatorics.combinationsWithRepetitionFrom([1, 2], taking: 2).count, 3)
+        XCTAssertEqual(Combinatorics.combinationsWithRepetitionFrom([1, 2], taking: 3).count, 4)
         XCTAssertEqual(Combinatorics.combinationsWithRepetitionFrom([1, 2, 3], taking: 3).count, 10)
         XCTAssertEqual(Combinatorics.combinationsWithRepetitionFrom([1, 2, 3, 4], taking: 4).count, 35)
         XCTAssertEqual(Combinatorics.combinationsWithRepetitionFrom([1, 2, 3, 4, 5], taking: 5).count, 126)

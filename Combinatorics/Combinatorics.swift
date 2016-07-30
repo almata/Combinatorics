@@ -31,8 +31,7 @@ public struct Combinatorics {
     }
     
     public static func permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
-        guard elements.count >= taking else { return [] }
-        guard elements.count > 0 && taking > 0 else { return [[]] }
+        guard elements.count >= 0 && taking > 0 else { return [[]] }
         
         if taking == 1 {
             return elements.map {[$0]}
