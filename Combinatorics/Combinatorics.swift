@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Combinatorics {
+public struct Combinatorics {
     
     // MARK: - Permutations
     
-    static func permutationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
+    public static func permutationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
         guard elements.count >= taking else { return [] }
         guard elements.count >= taking && taking > 0 else { return [[]] }
         
@@ -30,7 +30,7 @@ struct Combinatorics {
         return permutations
     }
     
-    static func permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
+    public static func permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
         guard elements.count >= taking else { return [] }
         guard elements.count > 0 && taking > 0 else { return [[]] }
         
@@ -48,7 +48,7 @@ struct Combinatorics {
 
     // MARK: - Combinations
     
-    static func combinationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
+    public static func combinationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
         guard elements.count >= taking else { return [] }
         guard elements.count > 0 && taking > 0 else { return [[]] }
         
@@ -66,7 +66,7 @@ struct Combinatorics {
         return combinations
     }
     
-    static func combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
+    public static func combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]] {
         guard elements.count >= 0 && taking > 0 else { return [[]] }
         
         if taking == 1 {
