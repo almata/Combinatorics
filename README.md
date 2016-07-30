@@ -30,6 +30,7 @@ Just drag the file `Combinatorics.swift` into your project. That is all you real
 
 ## Usage
 
+[WORK IN PROGRESS]
 
 permutationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
 	
@@ -38,6 +39,8 @@ permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
 combinationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
 
 combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+
+[/WORK IN PROGRESS]
 
 ## Some examples
 
@@ -51,12 +54,12 @@ combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
 
 Output:
 
-> abc
-> acb
-> bac
-> bca
-> cab
-> cba
+    abc
+    acb
+    bac
+    bca
+    cab
+    cba
 
 ### Example 2
 
@@ -69,15 +72,15 @@ Output:
 
 Output:
 
-> 1234
-> 1235
-> 1236
-> 1237
-> [many more numbers]
-> 98762
-> 98763
-> 98764
-> 98765
+    1234
+    1235
+    1236
+    1237
+    [many more numbers]
+    98762
+    98763
+    98764
+    98765
 
 ### Example 3
 
@@ -89,14 +92,14 @@ Output:
 
 Output:
 
-> 000
-> 001
-> 010
-> 011
-> 100
-> 101
-> 110
-> 111
+    000
+    001
+    010
+    011
+    100
+    101
+    110
+    111
 
 ### Example 4
 
@@ -108,16 +111,16 @@ Output:
 
 Output:
 
-> ["bacon", "cheese", "tomato"]
-> ["bacon", "cheese", "olives"]
-> ["bacon", "cheese", "onion"]
-> ["bacon", "tomato", "olives"]
-> ["bacon", "tomato", "onion"]
-> ["bacon", "olives", "onion"]
-> ["cheese", "tomato", "olives"]
-> ["cheese", "tomato", "onion"]
-> ["cheese", "olives", "onion"]
-> ["tomato", "olives", "onion"]
+    ["bacon", "cheese", "tomato"]
+    ["bacon", "cheese", "olives"]
+    ["bacon", "cheese", "onion"]
+    ["bacon", "tomato", "olives"]
+    ["bacon", "tomato", "onion"]
+    ["bacon", "olives", "onion"]
+    ["cheese", "tomato", "olives"]
+    ["cheese", "tomato", "onion"]
+    ["cheese", "olives", "onion"]
+    ["tomato", "olives", "onion"]
 
 ### Example 5
 
@@ -129,7 +132,7 @@ Output:
 
 Output: *don't get lost here, there obviously is only one way - picking all of them, as order does not matter!*
 
-> [4, 8, 15, 16, 23, 42]
+    [4, 8, 15, 16, 23, 42]
 
 ### Example 6
 
@@ -143,18 +146,18 @@ Output: *don't get lost here, there obviously is only one way - picking all of t
 
 Output:
 
-> 4 × soda
-> 
-> 3 × soda
-> 1 × beer
-> 
-> 2 × soda
-> 2 × beer
-> 
-> 1 × soda
-> 3 × beer
-> 
-> 4 × beer
+    4 × soda
+    
+    3 × soda
+    1 × beer
+    
+    2 × soda
+    2 × beer
+    
+    1 × soda
+    3 × beer
+    
+    4 × beer
 
 ## Author
 
