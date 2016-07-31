@@ -39,6 +39,7 @@ class CombinatoricsTests: XCTestCase {
     func testNumberOfPermutationsWithoutRepetitionFromEdgeCases() {
         XCTAssertEqual(Combinatorics.permutationsWithoutRepetitionFrom([Int](), taking: 0).count, 1)
         XCTAssertEqual(Combinatorics.permutationsWithoutRepetitionFrom([Int](), taking: 1).count, 0)
+        XCTAssertEqual(Combinatorics.permutationsWithoutRepetitionFrom([1, 2], taking: 3).count, 0)
         XCTAssertEqual(Combinatorics.permutationsWithoutRepetitionFrom([1, 2, 3, 4, 5], taking: 0).count, 1)
     }
     
@@ -135,6 +136,7 @@ class CombinatoricsTests: XCTestCase {
     func testNumberOfCombinationsWithoutRepetitionFromEdgeCases() {
         XCTAssertEqual(Combinatorics.combinationsWithoutRepetitionFrom([Int](), taking: 0).count, 1)
         XCTAssertEqual(Combinatorics.combinationsWithoutRepetitionFrom([Int](), taking: 1).count, 0)
+        XCTAssertEqual(Combinatorics.combinationsWithoutRepetitionFrom([1, 2], taking: 3).count, 0)
         XCTAssertEqual(Combinatorics.combinationsWithoutRepetitionFrom([1, 2, 3, 4, 5], taking: 0).count, 1)
     }
     
