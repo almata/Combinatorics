@@ -66,7 +66,9 @@ Finally, all functions are defined as generic, so permutations and combinations 
 
 ### Permutation without repetition
 
-    permutationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+```swift
+permutationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+```
 
 Given an array of `elements` and how many of them we are `taking`, returns an array with all possible permutations without repetition. Please note that as repetition is not allowed, `taking` must always be less or equal to `elements.count`.
 
@@ -74,7 +76,9 @@ Almost by convention, if `taking` is 0, the function will return `[[]]` (an arra
 
 ### Permutation with repetition
 
-    permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]	
+```swift
+permutationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]	
+```
 
 Given an array of `elements` and how many of them we are `taking`, returns an array with all possible permutations with repetition. Please note that as repetition is allowed, `taking` does not need to be less or equal to `elements.count`.
 
@@ -82,7 +86,9 @@ Almost by convention, if `taking` is 0, the function will return `[[]]` (an arra
 
 ### Combination without repetition
 
-    combinationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+```swift
+combinationsWithoutRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+```
 
 Given an array of `elements` and how many of them we are `taking`, returns an array with all possible combinations without repetition. Please note that as repetition is not allowed, `taking` must always be less or equal to `elements.count`.
 
@@ -92,7 +98,9 @@ Remember that, as combinations do not care about order, these two combinations r
 
 ### Combination with repetition
 
-    combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+```swift
+combinationsWithRepetitionFrom<T>(elements: [T], taking: Int) -> [[T]]
+```
 
 Given an array of `elements` and how many of them we are `taking`, returns an array with all possible combinations with repetition. Please note that as repetition is allowed, `taking` does not need to be less or equal to `elements.count`.
 
@@ -104,11 +112,13 @@ Remember that, as combinations do not care about order, these two combinations r
 
 ### Example 1
 
-	// All possible ways to arrange letters [abc].
-	let ps = Combinatorics.permutationsWithoutRepetitionFrom(["a", "b", "c"], taking: 3)
-	for p in ps { 
-		print(p.joinWithSeparator("")) 
-	}
+```swift
+// All possible ways to arrange letters [abc].
+let ps = Combinatorics.permutationsWithoutRepetitionFrom(["a", "b", "c"], taking: 3)
+for p in ps { 
+	print(p.joinWithSeparator("")) 
+}
+```
 
 Output:
 
@@ -121,12 +131,14 @@ Output:
 
 ### Example 2
 
-    // All possible numbers created by picking 5 different digits (accepting 0 as the first digit).
-    let ps = Combinatorics.permutationsWithoutRepetitionFrom(Array(0...9), taking: 5)
-    for p in ps {
-        var exp = 100000
-        print(p.reduce(0) { exp /= 10; return $0 + $1 * exp })
-    }
+```swift
+// All possible numbers created by picking 5 different digits (accepting 0 as the first digit).
+let ps = Combinatorics.permutationsWithoutRepetitionFrom(Array(0...9), taking: 5)
+for p in ps {
+    var exp = 100000
+    print(p.reduce(0) { exp /= 10; return $0 + $1 * exp })
+}
+```
 
 Output:
 
@@ -142,11 +154,13 @@ Output:
 
 ### Example 3
 
-    // All possible binary numbers using exactly 3 bits.
-    let prs = Combinatorics.permutationsWithRepetitionFrom(["0", "1"], taking: 3)
-    for pr in prs {
-        print(pr.joinWithSeparator(""))
-    }
+```swift
+// All possible binary numbers using exactly 3 bits.
+let prs = Combinatorics.permutationsWithRepetitionFrom(["0", "1"], taking: 3)
+for pr in prs {
+    print(pr.joinWithSeparator(""))
+}
+```
 
 Output:
 
@@ -161,11 +175,13 @@ Output:
 
 ### Example 4
 
-    // All possible pizzas you can order with 3 extra ingredients.
-    let cs = Combinatorics.combinationsWithoutRepetitionFrom(["bacon", "cheese", "tomato", "olives", "onion"], taking: 3)
-    for c in cs {
-        print(c)
-    }
+```swift
+// All possible pizzas you can order with 3 extra ingredients.
+let cs = Combinatorics.combinationsWithoutRepetitionFrom(["bacon", "cheese", "tomato", "olives", "onion"], taking: 3)
+for c in cs {
+    print(c)
+}
+```
 
 Output:
 
@@ -182,11 +198,13 @@ Output:
 
 ### Example 5
 
-    // All possible ways you can pick 6 numbers out of 6 available.
-    let cs = Combinatorics.combinationsWithoutRepetitionFrom([4, 8, 15, 16, 23, 42], taking: 6)
-    for c in cs { 
-		print(c) 
-	}
+```swift
+// All possible ways you can pick 6 numbers out of 6 available.
+let cs = Combinatorics.combinationsWithoutRepetitionFrom([4, 8, 15, 16, 23, 42], taking: 6)
+for c in cs { 
+	print(c) 
+}
+```
 
 Output: *don't get lost here, there obviously is only one way - picking all of them, as order does not matter!*
 
@@ -194,13 +212,15 @@ Output: *don't get lost here, there obviously is only one way - picking all of t
 
 ### Example 6
 
-    // All possible ways 4 people can order some drinks in a bar serving only soda and beer.
-    let crs = Combinatorics.combinationsWithRepetitionFrom(["soda", "beer"], taking: 4)
-    for cr in crs {
-        let grouped = NSCountedSet(array: cr)
-        grouped.forEach({ print("\(grouped.countForObject($0)) × \($0)") })
-        print("")
-    }
+```swift
+// All possible ways 4 people can order some drinks in a bar serving only soda and beer.
+let crs = Combinatorics.combinationsWithRepetitionFrom(["soda", "beer"], taking: 4)
+for cr in crs {
+    let grouped = NSCountedSet(array: cr)
+    grouped.forEach({ print("\(grouped.countForObject($0)) × \($0)") })
+    print("")
+}
+```
 
 Output:
 
