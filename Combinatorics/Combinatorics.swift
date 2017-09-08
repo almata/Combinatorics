@@ -137,11 +137,11 @@ extension Array {
   ///   - taking: Picking item count.
   ///   - withRepetition: Could select an item more than one.
   /// - Returns: Returns permutations.
-  public func permutations(taking: Int, withRepetition: Bool) -> [Array] {
+  public func permutations(taking: Int? = nil, withRepetition: Bool = false) -> [Array] {
     if withRepetition {
-      return Combinatorics.permutationsWithRepetitionFrom(self, taking: taking)
+      return Combinatorics.permutationsWithRepetitionFrom(self, taking: taking ?? self.count)
     }
-    return Combinatorics.permutationsWithoutRepetitionFrom(self, taking: taking)
+    return Combinatorics.permutationsWithoutRepetitionFrom(self, taking: taking ?? self.count)
   }
 
   /// Combinates array.
@@ -150,7 +150,7 @@ extension Array {
   ///   - taking: Picking item count.
   ///   - withRepetition: Could select an item more than one.
   /// - Returns: Returns combinations.
-  public func combinations(taking: Int, withRepetition: Bool) -> [Array] {
+  public func combinations(taking: Int, withRepetition: Bool = false) -> [Array] {
     if withRepetition {
       return Combinatorics.combinationsWithRepetitionFrom(self, taking: taking)
     }
