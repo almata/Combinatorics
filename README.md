@@ -24,6 +24,12 @@ Installation for [CocoaPods](https://cocoapods.org) is simple enough:
 
 And `import Combinatorics` in the files you would like to use it.
 
+### Carthage
+
+Install [Carthage](https://github.com/Carthage/Carthage) and add this to your Cartfile:
+
+	github "almata/Combinatorics"
+
 ### Old school
 
 Just drag the file `Combinatorics.swift` into your project. That is all you really need. Or if you just need a function or two, copy and paste that function into your project. At the end of the day **Combinatorics** is only a collection of static functions that could also be defined as global functions.
