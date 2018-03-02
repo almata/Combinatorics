@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat-square" alt="Platform: iOS 8+" />
-    <img src="https://img.shields.io/badge/language-Swift%202-f48041.svg?style=flat-square" alt="Language: Swift 2" />
+    <img src="https://img.shields.io/badge/language-Swift%204-f48041.svg?style=flat-square" alt="Language: Swift 4" />
     <img src="https://img.shields.io/badge/pod-1.0-green.svg?style=flat-square" alt="CocoaPods compatible" />
     <img src="http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat-square" alt="License: MIT" />
 </p>
@@ -11,7 +11,7 @@
 
 ## Compatibility
 
-**Combinatorics** requires iOS 8+ and is compatible with Swift 2 projects.
+**Combinatorics** requires iOS 8+ and is compatible with Swift 4 projects.
 
 ## Installation
 
